@@ -1,0 +1,29 @@
+{
+  "name": "nappi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build:ui": "rm -rf build && cd ../nappi_frontend && npm run build && cp -r build ../nappi",
+    "watch": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eino Vuorinen",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.11",
+    "react-scripts": "^3.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "engines": {
+    "node": ">= 6.9.4",
+    "npm": ">= 4.4.0"
+  }
+}
