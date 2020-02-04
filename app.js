@@ -38,8 +38,9 @@ app.put('/clicked', async (req, res) => {
     await u.save()
     res.status(201).json({p : prize, t : toNextPrize})
 });
-
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
+const mongourl = process.env.MONGODB_URI
+console.log(mongourl)
+mongoose.connect(mongourl, { useNewUrlParser: true })
   .then(result => {
     console.log('connected to MongoDB')
   })
