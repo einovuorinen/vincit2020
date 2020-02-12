@@ -31,7 +31,7 @@ app.put('/clicked', async (req, res) => {
 
     const toNextPrize = Math.min(500 - mod500, 100 - mod100, 10 - mod10)
     if (mod500 === 0) prize = 250
-    else if (mod100 === 0) prize = 100
+    else if (mod100 === 0) prize = 40
     else if (mod10 === 0) prize = 5
 
     const u = await Click.findByIdAndUpdate(clickId, {n : newClicks})
